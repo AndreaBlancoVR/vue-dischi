@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeaderDisk />
+    <MainDisk />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderDisk from './components/HeaderDisk.vue'
+import MainDisk from './components/MainDisk.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HeaderDisk,
+    MainDisk,
   }
 }
 </script>
