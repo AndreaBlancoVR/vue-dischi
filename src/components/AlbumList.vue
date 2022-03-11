@@ -6,7 +6,7 @@
           :key="i" 
           class="card-wrapper">
               <div class="card-header">
-                  <img class="aaa" src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/gn-covers/2019/04/CTWv1_CC_144-001_HD_5ca5299a751963.53054221.jpg?itok=ooPaoLDq" alt="">
+                  <img :src="el.poster">
               </div>
               <div class="card-footer">
                 <h3>{{el.title}}</h3>
@@ -90,6 +90,7 @@
                 .card-header {
                     width: 160px;
                     height: 160px;
+                    cursor: pointer;
                     // padding: 20px;
                     img {
                         width: 100%;
@@ -108,10 +109,12 @@
                         text-transform: uppercase;
                         padding-top: 25px;
                         padding-bottom: 30px;
+                        cursor: pointer;
                     }
 
                     p {
-                        color: #807E7C
+                        color: #807E7C;
+                        cursor: pointer;
                     }
                 }
             }
