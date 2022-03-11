@@ -23,13 +23,14 @@
   .header {
     width: 100%;
     height: 70px;
+    padding: 12px 0;
     background-color: #2E3A46;
-    border: 1px solid red;
+    
 
     .logo {
       width: 45px;
       height: 45px;
-      margin: 12px 23px;
+      margin: 0 23px;
 
       // img {
       //   color: #1ED760;
