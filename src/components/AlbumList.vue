@@ -1,12 +1,12 @@
 <template>
     <div class="row">
         <section>
-            <div>
+            <!-- <div>
                 <select name="category" id="category">
                     <option value="0">Album1</option>
                     <option value="1">Album2</option>
                 </select>
-            </div>
+            </div> -->
         </section>
         <div class="container-master">
             <ul class="card-container">
@@ -35,6 +35,12 @@
         }
     },
 
+    props: {
+        FilterString: {
+            type: String,
+            default: ''
+        }
+    },
 
     methods: {
         fetchAlbums: function() {
