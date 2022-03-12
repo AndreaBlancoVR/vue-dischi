@@ -4,10 +4,10 @@
             <!-- in questa select al change scateno la funzione emit -->
             <select name="category" @change="CategoriesFilter()" v-model="selected" id="category" aria-placeholder="Seleziona la categoria">
                 <option value="" disabled selected hidden>Seleziona una categoria</option>
-                <option value="0">Pop</option>
-                <option value="1">Jazz</option>
-                <option value="2">Rock</option>
-                <option value="3">Metal</option>
+                <option value="Pop">Pop</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Rock">Rock</option>
+                <option value="Metal">Metal</option>
             </select>
       </div>
   </section>
@@ -37,5 +37,6 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #1E2D3B;
     }
 </style>

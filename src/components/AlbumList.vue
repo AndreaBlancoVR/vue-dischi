@@ -2,10 +2,10 @@
     <div class="row">
         <div class="container-master">
             <ul class="card-container">
-                <AlbumCard v-for="(el, i) in albums" :key="i" :album="el"></AlbumCard> 
+                <AlbumCard v-for="(el, i) in filteredAlbums" :key="i" :album="el"></AlbumCard> 
             </ul>
             <div class="counter">
-                <p>Ci sono {{ albums.length}} album</p> 
+                <p>Ci sono {{ filteredAlbums.length}} album</p> 
             </div>
         </div> 
     </div>
@@ -34,7 +34,16 @@
         }
     },
 
-
+    computed: {
+        // creo una funzione che filtra album in base all'input inserito dall'utente
+        filteredAlbums: function () {
+            return this.albums.filter( (el) => {
+                // funzione di callBack che effettua il controllo
+                const { genre } = el
+                return genre.toLowerCase().includes( this.FilterStringFiglio.toLowerCase() );
+            } )
+        } 
+    },
 
     methods: {
         fetchAlbums: function() {
@@ -63,10 +72,10 @@
 
     .row {
       width: 100%;
-      height: 100vh;
+      height: calc(100vh - 200px);
       background-color: #1E2D3B;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       flex-direction: column;
 
@@ -76,14 +85,14 @@
 
       .container-master {
         flex-direction: column;
-        max-width: 1160px;
+        width: 1160px;
         display: flex;
 
         .card-container {
         display: flex;
         padding: 77px 0;
         flex-wrap: nowrap;
-        justify-content: flex-start;
+        justify-content: center;
         gap: 3%;
         flex-wrap: wrap;
 

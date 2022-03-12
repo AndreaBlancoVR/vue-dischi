@@ -2,7 +2,7 @@
   <main>
     <!-- recupero l'emit da AlbumSelect e passo i dati alla funzione setCategorie  -->
     <AlbumSelect @SelectCategorie="setCategories" />
-    <AlbumList :filter="FilterString" />
+    <AlbumList :FilterStringFiglio="FilterStringPadre" />
   </main>
 </template>
 
@@ -19,15 +19,17 @@
     },
     data() {
       return {
-        FilterString: '',
+        FilterStringPadre: '',
       }
     },
 
     methods: {
-
-      setCategories: function( ...params ) {
+      // passo il valore recuperato dall'emit a FilterString
+      setCategories: function( el ) {
+        this.FilterStringPadre = el;
         // console.log(stringInput, sec);
-        console.log( ...params );
+        // console.log( ...params );
+        console.log(this.FilterStringPadre)
       }
     }
   }
