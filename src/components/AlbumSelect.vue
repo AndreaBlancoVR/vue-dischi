@@ -7,7 +7,7 @@
                 <option value="0">Pop</option>
                 <option value="1">Jazz</option>
                 <option value="2">Rock</option>
-                <option value="3">Classica</option>
+                <option value="3">Metal</option>
             </select>
       </div>
   </section>
@@ -18,7 +18,6 @@ export default {
     data() {
         return {
             selected: '',
-            filter: '',
         }
     },
 

@@ -1,13 +1,5 @@
 <template>
     <div class="row">
-        <section>
-            <!-- <div>
-                <select name="category" id="category">
-                    <option value="0">Album1</option>
-                    <option value="1">Album2</option>
-                </select>
-            </div> -->
-        </section>
         <div class="container-master">
             <ul class="card-container">
                 <AlbumCard v-for="(el, i) in albums" :key="i" :album="el"></AlbumCard> 
@@ -36,11 +28,13 @@
     },
 
     props: {
-        FilterString: {
+        FilterStringFiglio: {
             type: String,
             default: ''
         }
     },
+
+
 
     methods: {
         fetchAlbums: function() {
